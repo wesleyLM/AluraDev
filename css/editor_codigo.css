@@ -1,0 +1,61 @@
+.editor_codigo{
+    width: calc(100vw - 752px);
+    margin: 0.6rem;
+}
+
+.editor_codigo-cor{
+    background: var(--azul-claro);
+    padding: 2rem;
+    
+    margin-bottom: 2rem;
+
+    border-radius: 8px;
+}
+
+.editor_codigo-pontos{
+    border-radius: 8px 8px 0 0;
+
+    background: var(--preto);
+    padding: 1rem;
+}
+.editor_codigo-pontos .fa-circle{
+    margin-right: 0.5rem;
+}
+.ponto-red{
+    color: #FF5F56;
+}
+
+.ponto-yellow{
+    color: #FFBD2E;
+}
+
+.ponto-green{
+    color: #27C93F;
+}
+
+.editor_codigo-campo{
+    width: 100%;
+    resize: none;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: .875rem;
+
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+
+    border-radius: 0 0 8px 8px;
+
+    color: var(--branco);
+
+    background: var(--preto);
+
+    outline: none;
+    border: transparent;
+    padding: 1rem;
+}
+
+.editor_codigo-botao{
+    background: var(--azul-escuro-botao);
+}
+

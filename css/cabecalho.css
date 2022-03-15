@@ -1,0 +1,27 @@
+.cabecalho{
+    border-radius: 40px 40px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 2rem;
+
+    box-sizing: border-box;
+}
+
+.cabecalho_input-busca{
+    width: calc(100vw - 752px);
+    min-width: 240px;
+}
+
+
+.cabecalho_perfil{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho_perfil-nome{
+    margin-left: .5rem;
+    color: var(--branco);
+}

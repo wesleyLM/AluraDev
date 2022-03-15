@@ -1,0 +1,48 @@
+.menu_lateral-direito{
+    width: calc(25% - 6rem);
+}
+
+.form_projeto-nome,
+.form_projeto-descricao{
+    margin-top: 1rem;
+    box-sizing: border-box;
+}
+
+.form_projeto-descricao{
+    resize: none;
+    overflow-y: hidden;
+}
+
+.form_projeto-conteudo, .personalizacao{
+    margin-bottom: 2.5rem;
+
+    padding: 0;
+}
+
+.personalizacao_linguagem, .personalizacao_cor{
+    margin-top: 1rem;
+} 
+
+.personalizacao_cor{
+    height: 3rem;
+    width: 100%;
+
+    border-radius: 8px;
+    border-color: var(--branco);
+
+    background: var(--azul-escuro);
+}
+
+.botao_salvar-projeto{
+    width: 100%;
+
+    border-radius: 8px;
+
+    padding: 1rem 0.8rem;
+
+    background: var(--azul-claro-botao);
+
+    border: none;
+
+    color: var(--azul-escuro);
+}

@@ -1,0 +1,38 @@
+.menu_lateral-esquerdo{
+    width: calc(25% - 2rem);
+}
+.menu_lateral-esquerdo a{
+    text-decoration: none;
+}
+
+.menu_lista{
+    list-style: none;
+}
+
+.menu_item{
+    margin-top: 1rem;
+}
+
+.menu_link-icone{
+    display: inline-block;
+
+    background: var(--azul-escuro-botao);
+    
+    padding: 1rem 0.9rem;
+
+    border-radius: 1rem;
+
+    margin-right: 1rem;
+}
+
+.menu_link-icone, .menu_link{
+    color: var(--cinza);
+}
+
+.menu_item.ativo .menu_link-icone{
+    background: var(--azul-claro);
+}
+
+.menu_item.ativo .menu_link-icone,.menu_item.ativo .menu_link{
+    color: var(--branco);
+}

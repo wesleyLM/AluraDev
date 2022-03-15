@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="font's/static/Inter-Regular.ttf">
+    <link rel="stylesheet" href="font's/static/RobotoMono-Regular.ttf">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/menu_lateral-esquerdo.css">
+    <link rel="stylesheet" href="css/editor_codigo.css">
+    <link rel="stylesheet" href="css/menu_lateral-direito.css">
+
+    <script src="https://kit.fontawesome.com/82182bd41b.js" crossorigin="anonymous"></script>
+
+    <title>Alura Dev</title>
+</head>
+<body>
+    <header class="cabecalho container">
+            <!-- logo alura dev -->
+            <a class="cabecalho-link-logo" href="index.html">
+                <img class="cabecalho_logo" src="img/logo-plataforma.svg" alt="Logo alura dev">
+            </a>
+
+
+            <!-- Formulário de busca -->
+            <form class="cabecalho_form-busca" action="">
+                <input class="cabecalho_input-busca input_style" type="search" name="cabecalho_input -busca" id="cabecalho_input-busca" placeholder="Busque por algo">
+            </form>
+
+            <!-- perfil de usuário  -->
+            <div class="cabecalho_perfil">
+                <img class="cabecalho_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
+                <p class="cabecalho_perfil-nome">Harry</p>
+            </div>
+    </header>
+    <main class="conteudo container">
+        <nav class="menu_lateral-esquerdo">
+            <h2 class="titulo_menu">Menu</h2>
+            <ul class="menu_lista">
+                <li class="menu_item ativo">
+                    <a href="index.html" class="menu_link-icone">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="index.html" class="menu_link">Editor de código</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link-icone">
+                        <i class="fas fa-users"></i>
+                    </a>
+                    <a href="#" class="menu_link">Comunidade</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="editor_codigo">
+            <div class="editor_codigo-cor">
+                <div class="editor_codigo-pontos">
+                    <i class="fa-solid fa-circle ponto-red"></i>
+                    <i class="fa-solid fa-circle ponto-yellow"></i>
+                    <i class="fa-solid fa-circle ponto-green"></i>
+                </div> 
+                <textarea name="editor_codigo-campo" id="editor_codigo-campo" class="editor_codigo-campo" rows="10">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => 
+accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}
+                </textarea>
+               
+            </div>
+
+            <button class="editor_codigo-botao input_style">Visualizar com o highlight</button>
+        </section>
+        <aside class="menu_lateral-direito">
+            <form action="" class="form_projeto">
+                <fieldset class="form_projeto-conteudo">
+                    <legend class="titulo_menu">Seu projeto</legend>
+
+                    <input type="text" name="projeto" id="projeto" class="form_projeto-nome input_style" placeholder="Nome do seu projeto">
+
+                    <textarea name="form_projeto-descricao" id="form_projeto-descricao" rows="2" class="form_projeto-descricao input_style" placeholder="Descrição do seu projeto"></textarea>
+                </fieldset>
+
+                <fieldset class="personalizacao">
+                    <legend class="titulo_menu">personalização</legend>
+
+                    <select name="personalizacao_linguagem" id="personalizacao_linguagem" class="personalizacao_linguagem input_style">
+                        <option value="javascript">JavaScript</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+
+    
+                    <input type="color" name="personalizacao_cor" id="personalizacao_cor" class="personalizacao_cor" value="#6BD1FF">
+                </fieldset>
+
+                <input type="submit" value="Salvar projeto" class="botao_salvar-projeto">
+            </form>
+        </aside>
+    </main>
+</body>
+</html>
