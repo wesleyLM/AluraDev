@@ -44,17 +44,17 @@
         <nav class="menu_lateral-esquerdo">
             <h2 class="titulo_menu">Menu</h2>
             <ul class="menu_lista">
-                <li class="menu_item ativo">
+                <li class="menu_item" data-menu>
                     <a href="index.html" class="menu_link-icone">
                         <i class="fas fa-code"></i>
                     </a>
                     <a href="index.html" class="menu_link">Editor de código</a>
                 </li>
-                <li class="menu_item">
-                    <a href="#" class="menu_link-icone">
+                <li class="menu_item" data-menu>
+                    <a href="comunidade.html" class="menu_link-icone">
                         <i class="fas fa-users"></i>
                     </a>
-                    <a href="#" class="menu_link">Comunidade</a>
+                    <a href="comunidade.html" class="menu_link">Comunidade</a>
                 </li>
             </ul>
         </nav>
@@ -65,7 +65,7 @@
                     <i class="fa-solid fa-circle ponto-yellow"></i>
                     <i class="fa-solid fa-circle ponto-green"></i>
                 </div> 
-                <textarea name="editor_codigo-campo" id="editor_codigo-campo" class="editor_codigo-campo" rows="10">
+                <!-- <textarea name="editor_codigo-campo" id="editor_codigo-campo" class="editor_codigo-campo" rows="10">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => 
 accum[key], obj)
 
@@ -78,7 +78,7 @@ const go = (f, seed, acc) => {
 }
 return go(f, seed, [])
 }
-                </textarea>
+                </textarea> -->
                
             </div>
 
@@ -111,5 +111,6 @@ return go(f, seed, [])
             </form>
         </aside>
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>

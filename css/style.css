@@ -1,11 +1,13 @@
 :root{
     --branco: #FFFFFF;
     --cinza: #E5E5E5;
+    --branco-cinza: #c4c4c4;
     --azul-cor-de-fundo: rgba(255, 255, 255, 0.16);
     --azul-claro: #6BD1FF;
     --azul-claro-botao: #5081FB;
+    --azul-escuro-hover: rgba(80, 129, 251, 0.64);
     --azul-escuro: #051D3B;
-    --azul-escuro-botao: rgba(80, 129, 251, 0.08);
+    --azul-escuro-botao: rgba(80, 129, 251, 0.16);
     --preto: #141414;
     
 }
