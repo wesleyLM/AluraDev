@@ -30,10 +30,6 @@
     color: var(--cinza);
 }
 
-.menu_link-icone:hover{
-    background: var(--azul-escuro-hover);
-}
-
 .menu_link-icone, .menu_link{
     color: var(--branco-cinza);
 }
