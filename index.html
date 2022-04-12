@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/dracula.css">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
 
@@ -16,6 +18,8 @@
     <link rel="stylesheet" href="css/menu_lateral-esquerdo.css">
     <link rel="stylesheet" href="css/editor_codigo.css">
     <link rel="stylesheet" href="css/menu_lateral-direito.css">
+    
+    
 
     <script src="https://kit.fontawesome.com/82182bd41b.js" crossorigin="anonymous"></script>
 
@@ -44,7 +48,7 @@
         <nav class="menu_lateral-esquerdo">
             <h2 class="titulo_menu">Menu</h2>
             <ul class="menu_lista">
-                <li class="menu_item" data-menu>
+                <li class="menu_item ativo" data-menu>
                     <a href="index.html" class="menu_link-icone">
                         <i class="fas fa-code"></i>
                     </a>
@@ -64,24 +68,13 @@
                     <i class="fa-solid fa-circle ponto-red"></i>
                     <i class="fa-solid fa-circle ponto-yellow"></i>
                     <i class="fa-solid fa-circle ponto-green"></i>
-                </div> 
-                <!-- <textarea name="editor_codigo-campo" id="editor_codigo-campo" class="editor_codigo-campo" rows="10">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => 
-accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-}
-return go(f, seed, [])
-}
-                </textarea> -->
-               
+                </div>
+                <div class="editor_codigo-base">
+                    <code class="editor_codigo-campo hljs" contenteditable="true" aria-label="Editor de código">
+                        Digite seu código
+                    </code>
+                </div>
             </div>
-
             <button class="editor_codigo-botao input_style">Visualizar com o highlight</button>
         </section>
         <aside class="menu_lateral-direito">
@@ -102,7 +95,6 @@ return go(f, seed, [])
                         <option value="html">HTML</option>
                         <option value="css">CSS</option>
                     </select>
-
     
                     <input type="color" name="personalizacao_cor" id="personalizacao_cor" class="personalizacao_cor" value="#6BD1FF">
                 </fieldset>
@@ -111,6 +103,8 @@ return go(f, seed, [])
             </form>
         </aside>
     </main>
-    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script src="js/editor-highlight.js"></script>
+    <script src="js/muda-cor.js"></script>
 </body>
 </html>
