@@ -1,5 +1,5 @@
 .menu_lateral-direito{
-    width: calc(25% - 6rem);
+    width: 100%;
 }
 
 .form_projeto-nome,
@@ -18,12 +18,22 @@
     padding: 0;
 }
 
+.personalizacao_input{
+    display: flex;     
+    flex-direction: column;  
+}
+
 .personalizacao_linguagem, .personalizacao_cor{
     margin-top: 1rem;
 } 
 
+.personalizacao_linguagem option{
+    color: var(--preto);
+    background-color: var(--azul-cor-de-fundo);
+}
+
 .personalizacao_cor{
-    height: 3rem;
+    height: 3.2rem;
     width: 100%;
 
     border-radius: 8px;
@@ -33,15 +43,40 @@
 }
 
 .botao_salvar-projeto{
-    width: 100%;
-
-    border-radius: 8px;
-
-    padding: 1rem 0.8rem;
-
     background: var(--azul-claro-botao);
 
-    border: none;
-
     color: var(--azul-escuro);
+
+    margin-bottom: 2.5rem;
+}
+
+.botao_salvar-projeto:hover{
+    background: var(--azul-claro-botao-hover);
+}
+
+.botao_salvar-projeto:active{
+    background-color: var(--azul-claro-botao-hover);
+    border: solid 4px var(--azul-claro-botao);
+}
+
+.botao_salvar-projeto:focus{
+    background-color: var(--azul-claro-botao-ativo);
+}
+
+@media screen and (min-width: 601px){
+    .personalizacao_input{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .menu_lateral-direito{
+        width: calc(25% - 6rem);
+    }
+
+    .personalizacao_input{
+        flex-direction: column;
+        gap: initial;
+    }
 }

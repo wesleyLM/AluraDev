@@ -2,38 +2,49 @@
     --branco: #FFFFFF;
     --cinza: #E5E5E5;
     --branco-cinza: #c4c4c4;
+    --azul-cor-de-fundo-perfil-hover: rgba(255, 255, 255, 0.08);
     --azul-cor-de-fundo: rgba(255, 255, 255, 0.16);
+    --azul-cor-de-fundo-hover: rgba(255, 255, 255, 0.24);
     --azul-claro: #6BD1FF;
-    --azul-claro-botao: #5081FB;
+    --azul-claro-botao: #5081fb;
+    --azul-claro-botao-hover: #7BA4FC;
+    --azul-claro-botao-ativo: #96B9FD;
     --azul-escuro-hover: rgba(80, 129, 251, 0.64);
     --azul-escuro: #051D3B;
-    --azul-escuro-botao: rgba(80, 129, 251, 0.16);
+    --azul-escuro-botao: rgba(80, 128, 251, 0.08);
+    --azul-escuro-botao-hover: rgba(80, 128, 251, 0.16);
+    --azul-escuro-botao-ativo: rgba(80, 128, 251, 0.24);
     --preto: #141414;
-    
+    --preto-cor-de-fundo: rgba(0, 0, 0, 0.16);
+    --menu-responsivo: #2d415b;
+}
+
+/* Resolver problema com conteúdo fora da tela no mobile */
+html, body {
+    position:relative;
+    overflow-x:hidden;
 }
 
 body{
     font-family: 'Inter', sans-serif;
     
     background-color: var(--cinza);
+
+    overflow-x: hidden;
 }
 
 .container{
-    width: 100%;
-
-    padding: 0 2rem;
+    padding: 0 1rem;
 
     background-color: var(--azul-escuro);
+
 }
 
 .conteudo.container{
     display: flex;
     justify-content: space-between;
 
-    box-sizing: border-box;
-
-    height: 100vh;
-    border-radius: 0 0 40px 40px;
+    flex-direction: column;
 }
 
 .titulo_menu{
@@ -59,6 +70,10 @@ body{
     width: 100%;
 }
 
+.input_style:hover, .input_style:focus{
+    background-color: var(--azul-cor-de-fundo-hover);
+}
+
 .input_style::placeholder{
     color: var(--cinza);
     line-height: 1.5rem;
@@ -66,4 +81,21 @@ body{
 
 .input_style:focus{
     outline: none;
+}
+
+@media screen and (min-width: 601px) and (min-width: 1024px){
+    .container{
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px){    
+    .conteudo.container{
+        display: flex;
+        justify-content: space-between;
+    
+        flex-direction: row;
+
+        box-sizing: border-box;
+    }
 }

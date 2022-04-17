@@ -1,7 +1,6 @@
 .cabecalho{
-    border-radius: 40px 40px 0 0;
-
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
     
@@ -11,17 +10,64 @@
 }
 
 .cabecalho_input-busca{
-    width: calc(100vw - 752px);
-    min-width: 240px;
+    display: none;
+    min-width: 331px;
+}
+
+.cabecalho_icone-lupa{
+    color: var(--branco);
+    font-size: 1.25rem;
 }
 
 
 .cabecalho_perfil{
-    display: flex;
+    display: none;
     align-items: center;
+
+    padding: 0.75rem;
+}
+
+.cabecalho_perfil:hover{
+    border-radius: 8px;
+    background-color: var(--azul-cor-de-fundo-perfil-hover);
 }
 
 .cabecalho_perfil-nome{
     margin-left: .5rem;
     color: var(--branco);
+}
+
+.cabecalho_icones{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.25rem;
+}
+
+@media screen and (min-width: 601px){
+    .cabecalho_input-busca{
+        display: block;
+        width: calc(100vw - 431px);
+    }
+
+    .cabecalho_icone-lupa::before, .cabecalho_icone-lupa{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .cabecalho_perfil{
+        display: flex;
+    }
+
+    .cabecalho_input-busca{
+        width: calc(100vw - 752px);
+    }
+
+    .cabecalho-link-logo{
+        flex-grow: 0.06;
+    }
+
+    .cabecalho_icones{
+        display: none;
+    }
 }
