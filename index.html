@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/dracula.css">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
 
@@ -12,10 +16,14 @@
     <link rel="stylesheet" href="font's/static/RobotoMono-Regular.ttf">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle-menu.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/menu_lateral-esquerdo.css">
     <link rel="stylesheet" href="css/editor_codigo.css">
     <link rel="stylesheet" href="css/menu_lateral-direito.css">
+
+    
+    
 
     <script src="https://kit.fontawesome.com/82182bd41b.js" crossorigin="anonymous"></script>
 
@@ -34,6 +42,20 @@
                 <input class="cabecalho_input-busca input_style" type="search" name="cabecalho_input -busca" id="cabecalho_input-busca" placeholder="Busque por algo">
             </form>
 
+            <!-- Toggle menu -->
+            <div class="cabecalho_icones">
+                <i class="fas fa-search cabecalho_icone-lupa"></i>
+
+                <div class="menu-toggle" aria-expanded="false" aria-controls="menu-esquerdo" aria-haspopup="true" aria-label="Abrir Menu">
+
+                    <input type="checkbox" name="checkbox-menu" id="checkbox-menu">
+    
+                    <label for="checkbox-menu">
+                        <span class="icone-menu" ></span>
+                    </label>
+                </div>
+            </div>
+
             <!-- perfil de usuário  -->
             <div class="cabecalho_perfil">
                 <img class="cabecalho_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
@@ -41,75 +63,90 @@
             </div>
     </header>
     <main class="conteudo container">
-        <nav class="menu_lateral-esquerdo">
+        <nav class="menu_lateral-esquerdo" id="menu-esquerdo" role="menu">
             <h2 class="titulo_menu">Menu</h2>
             <ul class="menu_lista">
-                <li class="menu_item ativo">
+                <li class="menu_item ativo" data-menu>
                     <a href="index.html" class="menu_link-icone">
                         <i class="fas fa-code"></i>
                     </a>
                     <a href="index.html" class="menu_link">Editor de código</a>
                 </li>
-                <li class="menu_item">
-                    <a href="#" class="menu_link-icone">
+                <li class="menu_item" data-menu>
+                    <a href="comunidade.html" class="menu_link-icone">
                         <i class="fas fa-users"></i>
                     </a>
-                    <a href="#" class="menu_link">Comunidade</a>
+                    <a href="comunidade.html" class="menu_link">Comunidade</a>
                 </li>
             </ul>
+
+            <!-- perfil de usuário  -->
+            <div class="menu_perfil">
+                <img class="menu_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
+                <p class="menu_perfil-nome">Harry</p>
+            </div>
         </nav>
         <section class="editor_codigo">
-            <div class="editor_codigo-cor">
-                <div class="editor_codigo-pontos">
-                    <i class="fa-solid fa-circle ponto-red"></i>
-                    <i class="fa-solid fa-circle ponto-yellow"></i>
-                    <i class="fa-solid fa-circle ponto-green"></i>
-                </div> 
-                <textarea name="editor_codigo-campo" id="editor_codigo-campo" class="editor_codigo-campo" rows="10">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => 
-accum[key], obj)
+            <div data-editor-codigo-conteudo >
+                <div class="editor_codigo-cor">
+                    <div class="editor_codigo-pontos">
+                        <i class="fa-solid fa-circle ponto-red"></i>
+                        <i class="fa-solid fa-circle ponto-yellow"></i>
+                        <i class="fa-solid fa-circle ponto-green"></i>
+                    </div>
+                    <div class="editor_codigo-base">
+<code class="editor_codigo-campo hljs" contenteditable="true" aria-label="Editor de código">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
 const unfold = (f, seed) => {
-const go = (f, seed, acc) => {
+    const go = (f, seed, acc) => {
     const res = f(seed)
     return res ? go(f, res[1], acc.concat([res[0]])) : acc
-}
-return go(f, seed, [])
-}
-                </textarea>
-               
+    }
+    return go(f, seed, [])
+}</code>
+                    </div>
+                </div>
             </div>
 
             <button class="editor_codigo-botao input_style">Visualizar com o highlight</button>
         </section>
         <aside class="menu_lateral-direito">
-            <form action="" class="form_projeto">
+            <form action="comunidade.html" class="form_projeto">
                 <fieldset class="form_projeto-conteudo">
                     <legend class="titulo_menu">Seu projeto</legend>
 
-                    <input type="text" name="projeto" id="projeto" class="form_projeto-nome input_style" placeholder="Nome do seu projeto">
+                    <input type="text" name="titulo" id="form_projeto-titulo" class="form_projeto-nome input_style" placeholder="Nome do seu projeto" required>
 
-                    <textarea name="form_projeto-descricao" id="form_projeto-descricao" rows="2" class="form_projeto-descricao input_style" placeholder="Descrição do seu projeto"></textarea>
+                    <textarea name="descricao" id="form_projeto-descricao" rows="2" class="form_projeto-descricao input_style" placeholder="Descrição do seu projeto"></textarea>
                 </fieldset>
 
                 <fieldset class="personalizacao">
                     <legend class="titulo_menu">personalização</legend>
 
-                    <select name="personalizacao_linguagem" id="personalizacao_linguagem" class="personalizacao_linguagem input_style">
-                        <option value="javascript">JavaScript</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                    </select>
+                    <div class="personalizacao_input">
+                        <select name="personalizacao_linguagem" id="personalizacao_linguagem" class="personalizacao_linguagem input_style">
+                            <option value="javascript">JavaScript</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                        </select>
+        
+                        <input type="color" name="cor" id="personalizacao_cor" class="personalizacao_cor" value="#6BD1FF">
+                    </div>
 
-    
-                    <input type="color" name="personalizacao_cor" id="personalizacao_cor" class="personalizacao_cor" value="#6BD1FF">
                 </fieldset>
 
-                <input type="submit" value="Salvar projeto" class="botao_salvar-projeto">
+                <input type="submit" value="Salvar projeto" class="botao_salvar-projeto input_style" data-btn>
             </form>
         </aside>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+
+    <script src="js/cartao.js"></script>
+    <script src="js/editor-highlight.js"></script>
+    <script src="js/toggle-menu.js"></script>
+    <script src="js/muda-cor.js"></script>
+    <script src="js/limpa-form.js"></script>
 </body>
 </html>
