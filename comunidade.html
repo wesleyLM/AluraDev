@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/dracula.css">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -12,33 +17,51 @@
     <link rel="stylesheet" href="font's/static/RobotoMono-Regular.ttf">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle-menu.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/menu_lateral-esquerdo.css">
     <link rel="stylesheet" href="css/editor_codigo.css">
     <link rel="stylesheet" href="css/menu_lateral-direito.css">
+    <link rel="stylesheet" href="css/cartao.css">
 
     <script src="https://kit.fontawesome.com/82182bd41b.js" crossorigin="anonymous"></script>
 
     <title>Alura Dev</title>
 </head>
+
 <body>
     <header class="cabecalho container">
-            <!-- logo alura dev -->
-            <a class="cabecalho-link-logo" href="index.html">
-                <img class="cabecalho_logo" src="img/logo-plataforma.svg" alt="Logo alura dev">
-            </a>
+        <!-- logo alura dev -->
+        <a class="cabecalho-link-logo" href="index.html">
+            <img class="cabecalho_logo" src="img/logo-plataforma.svg" alt="Logo alura dev">
+        </a>
 
 
-            <!-- Formulário de busca -->
-            <form class="cabecalho_form-busca" action="">
-                <input class="cabecalho_input-busca input_style" type="search" name="cabecalho_input -busca" id="cabecalho_input-busca" placeholder="Busque por algo">
-            </form>
+        <!-- Formulário de busca -->
+        <form class="cabecalho_form-busca" action="">
+            <input class="cabecalho_input-busca input_style" type="search" name="cabecalho_input -busca"
+                id="cabecalho_input-busca" placeholder="Busque por algo">
+        </form>
 
-            <!-- perfil de usuário  -->
-            <div class="cabecalho_perfil">
-                <img class="cabecalho_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
-                <p class="cabecalho_perfil-nome">Harry</p>
+        <!-- Toggle menu -->
+        <div class="cabecalho_icones">
+            <i class="fas fa-search cabecalho_icone-lupa"></i>
+
+            <div class="menu-toggle">
+
+                <input type="checkbox" name="checkbox-menu" id="checkbox-menu">
+
+                <label for="checkbox-menu">
+                    <span class="icone-menu"></span>
+                </label>
             </div>
+        </div>
+
+        <!-- perfil de usuário  -->
+        <div class="cabecalho_perfil">
+            <img class="cabecalho_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
+            <p class="cabecalho_perfil-nome">Harry</p>
+        </div>
     </header>
     <main class="conteudo container">
         <nav class="menu_lateral-esquerdo">
@@ -57,10 +80,58 @@
                     <a href="comunidade.html" class="menu_link">Comunidade</a>
                 </li>
             </ul>
+            <!-- perfil de usuário  -->
+            <div class="menu_perfil">
+                <img class="menu_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil">
+                <p class="menu_perfil-nome">Harry</p>
+            </div>
         </nav>
         <section class="comunidade">
+            
+            <div class="cartao">
+                <div class="cartao-cor">
+                    <div class="cartao-pontos">
+                        <i class="fa-solid fa-circle ponto-red"></i>
+                        <i class="fa-solid fa-circle ponto-yellow"></i>
+                        <i class="fa-solid fa-circle ponto-green"></i>
+                    </div>
+                    <div class="cartao-base">
+                        <code class="cartao-campo hljs" contenteditable="false" aria-label="Editor de código">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}</code>
+                    </div>
+                </div>
+                <div class="cartao-informacao">
+                    <h2 class="cartao-titulo">Titulo do projeto</h2>
+                    <p class="cartao-descricao">Esta é a descrição do projeto</p>
+                </div>
+                <div class="cartao-hover">
+                    <div class="cartao-interacao">
+                        <i class="fa-solid fa-comment icone comentario"></i>
+                        <span class="contagem-comentario">0</span>
+                        <i class="fa-solid fa-heart icone curtida"></i>
+                        <span class="contagem-curtidas">0</span>
+                    </div>
+                    <div class="cartao_perfil">
+                        <a href="#"><img class="cartao_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil"></a>
+                        <a href="#" class="cartao_perfil-nome">@Harry</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <script src="js/toggle-menu.js"></script>
+    <script src="js/limpa-form.js"></script>
+    <script src="js/hover.js"></script>
 </body>
+
 </html>
