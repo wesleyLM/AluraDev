@@ -12,15 +12,6 @@
                 card.classList.add('cartao-hover-aparecer')
             })
 
-            element.addEventListener("touchmove", function (){
-                card.classList.add('cartao-hover-aparecer')
-            })
-
-            
-            element.addEventListener("touchcancel", function (){
-                card.classList.remove('cartao-hover-aparecer')
-            })
-
             element.addEventListener("mouseout", function (){
                 card.classList.remove('cartao-hover-aparecer')
             })

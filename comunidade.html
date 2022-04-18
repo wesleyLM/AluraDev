@@ -115,10 +115,16 @@ const unfold = (f, seed) => {
                 </div>
                 <div class="cartao-hover">
                     <div class="cartao-interacao">
-                        <i class="fa-solid fa-comment icone comentario"></i>
-                        <span class="contagem-comentario">0</span>
-                        <i class="fa-solid fa-heart icone curtida"></i>
-                        <span class="contagem-curtidas">0</span>
+                        <div class="cartao-icones">
+                            <i class="fa-solid fa-comment icone comentario"></i>
+                            <span class="contagem-comentario">0</span>
+                        </div>
+
+                        <div class="cartao-icones">
+                            <i class="fa-solid fa-heart icone curtida"></i>
+                            <span class="contagem-curtidas">0</span>
+                        </div>
+
                     </div>
                     <div class="cartao_perfil">
                         <a href="#"><img class="cartao_perfil-foto" src="img/foto-perfil.png" alt="foto de perfil"></a>
@@ -129,6 +135,7 @@ const unfold = (f, seed) => {
         </section>
     </main>
 
+    <script src="js/input-busca.js"></script>
     <script src="js/toggle-menu.js"></script>
     <script src="js/limpa-form.js"></script>
     <script src="js/hover.js"></script>

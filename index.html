@@ -46,11 +46,11 @@
             <div class="cabecalho_icones">
                 <i class="fas fa-search cabecalho_icone-lupa"></i>
 
-                <div class="menu-toggle" aria-expanded="false" aria-controls="menu-esquerdo" aria-haspopup="true" aria-label="Abrir Menu">
+                <div class="menu-toggle">
 
                     <input type="checkbox" name="checkbox-menu" id="checkbox-menu">
     
-                    <label for="checkbox-menu">
+                    <label for="checkbox-menu" aria-expanded="false" aria-controls="menu-esquerdo" aria-haspopup="true" aria-label="Abrir Menu">
                         <span class="icone-menu" ></span>
                     </label>
                 </div>
@@ -143,6 +143,7 @@ const unfold = (f, seed) => {
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
+    <script src="js/input-busca.js"></script>
     <script src="js/cartao.js"></script>
     <script src="js/editor-highlight.js"></script>
     <script src="js/toggle-menu.js"></script>

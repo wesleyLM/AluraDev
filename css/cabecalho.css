@@ -4,21 +4,41 @@
     justify-content: space-between;
     align-items: center;
     
-    padding: 2rem;
+    padding: 2rem .8rem;
 
     box-sizing: border-box;
 }
 
 .cabecalho_input-busca{
     display: none;
+
     min-width: 331px;
 }
 
-.cabecalho_icone-lupa{
-    color: var(--branco);
-    font-size: 1.25rem;
+.cabecalho_input-busca.active{
+    display: block;
+    width: calc(100vw - 30%);
+    box-sizing: border-box;
 }
 
+.cabecalho_icone-lupa{
+    padding: 0.9rem;
+
+    color: var(--branco);
+    font-size: 1.25rem;
+
+    align-self: center;
+
+    border-radius: 1rem;
+}
+
+.cabecalho_icone-lupa:hover{
+    background-color: var(--azul-cor-de-fundo-perfil-hover);
+}
+
+.cabecalho_icone-lupa:active{
+    background-color: var(--azul-cor-de-fundo);
+}
 
 .cabecalho_perfil{
     display: none;
@@ -29,6 +49,7 @@
 
 .cabecalho_perfil:hover{
     border-radius: 8px;
+
     background-color: var(--azul-cor-de-fundo-perfil-hover);
 }
 
@@ -40,7 +61,7 @@
 .cabecalho_icones{
     display: flex;
     justify-content: space-between;
-    gap: 2.25rem;
+    gap: 1.5rem;
 }
 
 @media screen and (min-width: 601px){
@@ -51,6 +72,7 @@
 
     .cabecalho_icone-lupa::before, .cabecalho_icone-lupa{
         display: none;
+        padding: 0;
     }
 }
 

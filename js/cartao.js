@@ -3,10 +3,9 @@ let formEditor = document.querySelector('.form_projeto')
 let btnSalvar = document.querySelector('[data-btn]')
 
 
-function criarCartao(){
+function criarCartao() {
     console.log(dadosCartao(formEditor))
     console.log(conteudoEditorCodigo.innerHTML)
-    debugger
 }
 
 

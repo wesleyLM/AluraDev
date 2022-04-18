@@ -1,6 +1,6 @@
 .menu_lateral-esquerdo{
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
 
     align-self: flex-end;
@@ -14,14 +14,10 @@
     box-sizing: border-box;
 
     border-radius: 0.5rem;
-
-    transform: translateX(calc(100% + 2rem));
-
-    transition: transform 0.5s;
 }
 
 .menu_lateral-esquerdo.active{
-    transform: translateX(0);
+    display: flex;
 }
 
 .menu_lateral-esquerdo a{
@@ -91,13 +87,14 @@
 
 @media screen and (min-width: 1024px){
     .menu_lateral-esquerdo{
-        display: block;
+        display: flex;
         width: calc(25% - 2rem);
+        align-self: flex-start;
 
         background-color: initial;
         padding: initial;
 
-        position: static;
+        position: initial;
 
         transform: translateX(0);
     }
