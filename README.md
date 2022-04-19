@@ -34,5 +34,47 @@ Os usuarios serão capazes de:
 - Criar um código e setar o highlight
 
 
+### Screenshot
 
+![](./public/print_home.png)
+
+### Links
+
+- Site hospedado: [Alura Dev](https://alura-challenge-frontend.vercel.app/)
+
+## Processo
+
+### Construito com
+
+- Tags HTMl semânticas
+- Sass
+- Flexbox
+- Grid Layout
+- [React](https://reactjs.org/) - JS library
+
+### O que eu aprendi
+
+- Utilizar bibliotecas como:
+  - [Highlight JS](https://highlightjs.org/)
+  - [File Saver](https://github.com/eligrey/FileSaver.js/)
+  - [Dom to image](https://github.com/tsayen/dom-to-image)
+- Desenvolvimento em grupo, ajudando e sendo ajudado no discord.
+- Utilizar o trello para organizar minhas tarefas.
+
+
+### Continuação do desenvolvimento
+
+Pretendo adicionar algumas features como:
+
+- Alterar nome e foto de perfil
+- Dar like
+- Ver perfil
+- Adicionar github no perfil
+- Barra de pesquisa funcional
+
+## Autor
+
+- Site - [Mateus Henrique](https://mateushenriquedev.ml/)
+- Frontend Mentor - [mateushenrique-dev](https://www.frontendmentor.io/profile/mateushenrique-dev)
+- GitHub - [mateushenrique-dev](https://github.com/mateushenrique-dev)
 
