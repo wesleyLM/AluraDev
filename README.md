@@ -76,5 +76,5 @@ Pretendo adicionar algumas features como:
 
 ## Autor
 
-- GitHub - [mateushenrique-dev](https://github.com/wesleyLM)
+- GitHub - [WesleyLM](https://github.com/wesleyLM)
 
