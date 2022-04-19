@@ -22,7 +22,7 @@ Basta digita este o código `git clone https://github.com/wesleyLM/AluraDev` no 
 - [Processo](#processo)
   - [Contruido com](#construido-com)
   - [O que eu aprendi](#oque-eu-aprendi)
-  - [Continuação do desenvolvimento](#continuacao-do-desenvolvimento)
+  - [Continuação do desenvolvimento](#continuação-do-desenvolvimento)
   - [Recursos úteis](#recursos-uteis)
 - [Autor](#autor)
 
