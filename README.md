@@ -16,7 +16,7 @@ Basta digita este o código `git clone https://github.com/wesleyLM/AluraDev` no 
 ## Conteúdos
 
 - [Overview](#overview)
-  - [O Challenge](#the-challenge)
+  - [O Challenge](#o-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [Processo](#processo)
