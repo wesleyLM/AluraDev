@@ -36,29 +36,25 @@ Os usuarios serão capazes de:
 
 ### Screenshot
 
-![](./public/print_home.png)
+![](./img/print-semana-dois.PNG)
 
 ### Links
 
-- Site hospedado: [Alura Dev](https://alura-challenge-frontend.vercel.app/)
+- Site hospedado: [Alura Dev](https://alura-dev-git-main-wesleylm.vercel.app/)
 
 ## Processo
 
 ### Construito com
 
 - Tags HTMl semânticas
-- Sass
+- CSS
 - Flexbox
-- Grid Layout
-- [React](https://reactjs.org/) - JS library
+- JavaScript
 
 ### O que eu aprendi
 
 - Utilizar bibliotecas como:
   - [Highlight JS](https://highlightjs.org/)
-  - [File Saver](https://github.com/eligrey/FileSaver.js/)
-  - [Dom to image](https://github.com/tsayen/dom-to-image)
-- Desenvolvimento em grupo, ajudando e sendo ajudado no discord.
 - Utilizar o trello para organizar minhas tarefas.
 
 
@@ -71,10 +67,12 @@ Pretendo adicionar algumas features como:
 - Ver perfil
 - Adicionar github no perfil
 - Barra de pesquisa funcional
+- Salva o projeto na pagina de comunidade
+- Editar o processo apos salvo
+- Pagina Style guide
+- Exporta código por meio de imagem ou código preferido
 
 ## Autor
 
-- Site - [Mateus Henrique](https://mateushenriquedev.ml/)
-- Frontend Mentor - [mateushenrique-dev](https://www.frontendmentor.io/profile/mateushenrique-dev)
-- GitHub - [mateushenrique-dev](https://github.com/mateushenrique-dev)
+- GitHub - [mateushenrique-dev](https://github.com/wesleyLM)
 
