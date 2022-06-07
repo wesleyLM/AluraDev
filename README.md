@@ -9,7 +9,7 @@ Basta digita este o código `git clone https://github.com/wesleyLM/AluraDev` no 
 
 ## Como utilizar
 
-- Para utilizar o editor de código, basta clicar no bloco preto e começar a digitar, após ter digitado o seu código, clique em "Vidualisar com o highlight" 
+- Para utilizar o editor de código, basta clicar no bloco preto e começar a digitar, após ter digitado o seu código, clique em "Visualisar com o highlight" 
 
  - Para alterar a cor de fundo do editor, clique no color picked abaixo de personalização e escolha a cor desejada. 
 
